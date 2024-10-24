@@ -31,6 +31,7 @@ CSS TABLE OF CONTENTS
 
 #ANIMATION
     #SMOOTH SCROLLING
+    #SCROLL TRIGGERED ANIMATION
 
 #CUSTOM STYLING
 
@@ -52,11 +53,11 @@ CSS TABLE OF CONTENTS
     --color-text-body: rgb(255, 255, 255, 0.8);
     --color-text-headings: rgb(255, 255, 255, 00.8); */
 
-    --color-links:blue;
-    --color-links-hover: darkblue;
-    --color-links-dark: blue;
-    --color-links-darker: darkblue;
-    --color-links-light: lightblue;
+    --color-links:orange;
+    --color-links-hover: darkorange;
+    --color-links-dark: orange;
+    --color-links-darker: darkorange;
+    --color-links-light: rgb(205, 228, 252);
     --color-links-lighter: white;
 
     --color-siteheader-background: transparent;
@@ -534,6 +535,11 @@ section {
     background-color: var(--color-hero-background);
     color: var(--color-hero-text);
 
+    /* background-image: url(https://github.com/takyyttik/ohwhaleco-framework/blob/main/img/ohwhale_ocean.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 10em 1em; */
+
     h1 {
         font-size: 4em;
         line-height: 1;
@@ -545,6 +551,7 @@ section {
         color: var(--color-hero-headings);
     }
 }
+
 
 /* SITE FOOTER */
 .site-footer {
@@ -638,4 +645,42 @@ section {
 /* ADD SUPPORT FOR SMOOTH SCROLLING */
 html {
     scroll-behavior: smooth;
+}
+
+/* SCROLL TRIGGERED ANIMATION */
+.observe-me {
+    opacity: 0;
+    transition: all 1s ease-out .5s;
+
+    &[data-viewstate="active"] {
+        opacity: 1;
+    }
+}
+
+.animate-from-upperleft {
+    translate: -20px -20px;
+
+    &[data-viewstate="active"] {
+        translate: 0 0;
+    }
+}
+.animate-from-lowerright {
+    translate: 20px 20px;
+    &[data-viewstate="active"] {
+        translate: 0 0;
+    }
+}
+
+.animate-from-left {
+    translate: -20px 0px;
+
+    &[data-viewstate="active"] {
+        translate: 0 0;
+    }
+}
+.animate-from-right {
+    translate: 20px 0px;
+    &[data-viewstate="active"] {
+        translate: 0 0;
+    }
 }
