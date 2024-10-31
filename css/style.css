@@ -63,7 +63,7 @@ CSS TABLE OF CONTENTS
     --color-siteheader-background: transparent;
     --color-siteheader-links: var(--color-text-headings);
 
-    --color-hero-background: rgb(100 100 100);
+    --color-hero-background: lightblue;
     --color-hero-text: rgb(255 255 255 /.8);
     --color-hero-headings: rgb(255 255 255 / 1);
 
@@ -535,10 +535,10 @@ section {
     background-color: var(--color-hero-background);
     color: var(--color-hero-text);
 
-    /* background-image: url(https://github.com/takyyttik/ohwhaleco-framework/blob/main/img/ohwhale_ocean.jpg);
+    background-image: url(https://ohwhaleshop.carrd.co/assets/images/gallery02/87c68510_original.jpg?v=d4f014d5);
     background-size: cover;
-    background-position: center;
-    padding: 10em 1em; */
+    background-position: center bottom;
+    padding: 10em 1em;
 
     h1 {
         font-size: 4em;
