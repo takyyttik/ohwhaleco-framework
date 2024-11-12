@@ -45,7 +45,7 @@ CSS TABLE OF CONTENTS
 
     /* DEFINE ALL COMMONLY USED COLORS HERE */
 
-    --color-body-background:rgb(255 255 255);
+    --color-body-background: lightblue;
     --color-text-body: rgb(0 0 0 / .8);
     --color-text-headings: rgb(0 0 0 / 1);
 
@@ -53,12 +53,12 @@ CSS TABLE OF CONTENTS
     --color-text-body: rgb(255, 255, 255, 0.8);
     --color-text-headings: rgb(255, 255, 255, 00.8); */
 
-    --color-links:orange;
-    --color-links-hover: darkorange;
-    --color-links-dark: orange;
-    --color-links-darker: darkorange;
-    --color-links-light: rgb(205, 228, 252);
-    --color-links-lighter: white;
+    --color-links:white;
+    --color-links-hover: rgb(205 228 252);
+    --color-links-dark: rgba(49 74 100);
+    --color-links-darker: #1d2b3a;
+    --color-links-light: rgba(123 180 242);
+    --color-links-lighter: rgba(212 234 255);
 
     --color-siteheader-background: transparent;
     --color-siteheader-links: var(--color-text-headings);
@@ -67,7 +67,7 @@ CSS TABLE OF CONTENTS
     --color-hero-text: rgb(255 255 255 /.8);
     --color-hero-headings: rgb(255 255 255 / 1);
 
-    --color-sitefooter-background: rgb(100 100 100);
+    --color-sitefooter-background: rgb(239 158 82);
     --color-sitefooter-text: rgb(255 255 255 /.8);
     --color-sitefooter-headings: (255 255 255 / 1);
     --color-sitefooter-links: (255 255 255);
@@ -258,7 +258,7 @@ body {
     /* CENTERED COLUMNS */
     .one-half.centered { grid-column: 4 / span 6;}
     .one-third.centered { grid-column: 5 / span 4;}
-    .two-third.centered { grid-column: 3 / span 8;}
+    .two-thirds.centered { grid-column: 3 / span 8;}
 
     /* PUSHES */
     .push-1 { grid-column-start: 2; }
@@ -368,8 +368,8 @@ body {
 
 .toggle-menu {
 
-    --color-togglemenu-background: green;
-    --color-togglemenu-text: pink;
+    --color-togglemenu-background: rgb(100 156 217);
+    --color-togglemenu-text: rgb(212 234 255);
 
     display: flex;
     flex-direction: row-reverse;
@@ -535,7 +535,7 @@ section {
     background-color: var(--color-hero-background);
     color: var(--color-hero-text);
 
-    background-image: url(https://ohwhaleshop.carrd.co/assets/images/gallery02/87c68510_original.jpg?v=d4f014d5);
+    background-image: url('../img/ohwhale_ocean.jpg');
     background-size: cover;
     background-position: center bottom;
     padding: 10em 1em;
@@ -635,6 +635,21 @@ section {
     padding: var(--unit-small);
     min-width: 232px;
     } 
+}
+
+.product-card {
+    padding-bottom: 3svh;
+    margin-top: -3svh;
+}
+
+/* SECTION A*/
+.section-a {
+    background-color: rgb(172 201 231);
+}
+
+/* SECTION B */
+.section-b {
+    background-color: rgba(252 245 235);
 }
 
 
