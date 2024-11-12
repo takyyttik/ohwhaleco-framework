@@ -45,7 +45,7 @@ CSS TABLE OF CONTENTS
 
     /* DEFINE ALL COMMONLY USED COLORS HERE */
 
-    --color-body-background: lightblue;
+    --color-body-background: rgb(252 245 235);
     --color-text-body: rgb(0 0 0 / .8);
     --color-text-headings: rgb(0 0 0 / 1);
 
@@ -55,10 +55,10 @@ CSS TABLE OF CONTENTS
 
     --color-links:white;
     --color-links-hover: rgb(205 228 252);
-    --color-links-dark: rgba(49 74 100);
+    --color-links-dark: rgb(49 74 100);
     --color-links-darker: #1d2b3a;
-    --color-links-light: rgba(123 180 242);
-    --color-links-lighter: rgba(212 234 255);
+    --color-links-light: rgb(123 180 242);
+    --color-links-lighter: rgb(212 234 255);
 
     --color-siteheader-background: transparent;
     --color-siteheader-links: var(--color-text-headings);
@@ -588,6 +588,7 @@ section {
 .button {
     /* SET THE BUTTON COLORS */
     border: 1px solid var(--color-links-dark);
+    border-radius: 8px;
     background-color: var(--color-links-dark);
     color: white;
 
@@ -642,15 +643,103 @@ section {
     margin-top: -3svh;
 }
 
-/* SECTION A*/
-.section-a {
+/* SECTION CUSTONIZATION */
+
+.featured-bg {
     background-color: rgb(172 201 231);
+    z-index: -5;
+    position: relative;
+    background-image: url('../img/featured_bubbles.png');
+    background-size: cover;
+    background-position: left top;
+}
+.purplestarplanet {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: translate(0px, 130px);
+    z-index: -3;
 }
 
-/* SECTION B */
-.section-b {
-    background-color: rgba(252 245 235);
+.product-bg{
+    position: relative;
+    background-color: rgb(252 245 235);
+    z-index: -10;
+    /* background-image: url('../img/home_yellow_waves.png');
+    background-size: 100% 100%;
+    background-position: center bottom; */
+    &::before {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        content: "";
+        background-image: url('../img/product_yellow_left.png');
+        width: 298px;
+        height: 552px;
+        z-index: -1;
+    }
+    &::after {
+        position: absolute;
+        top: 30%;
+        right: 0;
+        content: "";
+        background-image: url('../img/product_yellow_right.png');
+        width: 195px;
+        height: 469px;
+        z-index: -1;
+    }
 }
+
+.care-bg {
+    position: relative;
+    background-color: rgb(172 201 231);
+    z-index: -10;
+    /* background-image: url('../img/home_blue_waves.png');
+    background-size: 100% 100%;
+    background-position: center top; */
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "";
+        background-image: url('../img/care_blue_left.png');
+        width: 298px;
+        height: 255px;
+        z-index: -1;
+    }
+    &::after {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        content: "";
+        background-image: url('../img/care_blue_right.png');
+        width: 367px;
+        height: 297px;
+        z-index: -1;
+    }
+}
+.bluewhale {
+    position: absolute;
+    left: 30;
+    top: 0;
+    transform: translate(0px, -100px);
+}
+
+.grid-bg {
+    /* background-color: rgb(252 245 235); */
+    z-index: -10;
+    background-image: url('../img/grid.png');
+    background-size: cover;
+    background-position: center;
+    
+    
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+}
+
 
 
 /* ---------------------- */
