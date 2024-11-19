@@ -280,11 +280,11 @@ body {
 }
 
 /* FOR DEMO PURPOSES */
-.demo > * {
+/* .demo > * {
     background-color: #444;
     padding: 1em;
     text-align: center;
-}
+} */
 
 
 /* ---------------------- */
@@ -538,7 +538,7 @@ section {
     background-image: url('../img/ohwhale_ocean.jpg');
     background-size: cover;
     background-position: center bottom;
-    padding: 10em 1em;
+    padding: 15em 1em;
 
     h1 {
         font-size: 4em;
@@ -559,7 +559,7 @@ section {
     color: var(--color-sitefooter-text);
 
     /* ADD SOME GENERAL SPACEING/PADDING AROUND THE HEADER */
-    padding: var(--unit-small);    
+    padding: var(--unit-large);    
 
     h1, h2, h3 {
         color: var(--color-sitefooter-headings);
@@ -576,6 +576,7 @@ section {
             list-style: none;
             margin: 0;
             padding: 0;
+            line-height: 200%;
         }
     }
 }
@@ -718,21 +719,22 @@ section {
         z-index: -1;
     }
 }
-.bluewhale {
+
+.babypurple {
     position: absolute;
-    left: 30;
+    right: 0;
     top: 0;
-    transform: translate(0px, -100px);
 }
 
 .grid-bg {
     /* background-color: rgb(252 245 235); */
+    position: relative;
     z-index: -10;
     background-image: url('../img/grid.png');
     background-size: cover;
     background-position: center;
     
-    
+
     ul {
         list-style: none;
         margin: 0;
@@ -740,6 +742,30 @@ section {
     }
 }
 
+.bluewhale {
+    position: absolute;
+    left: 30;
+    top: 0;
+    transform: translate(0px, -100px);
+    }
+
+.planetblue {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: translate(-50px, -50px);
+}
+
+/* ALIGN CONTENT : CENTER | LEFT TEXT |*/
+.middle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left {
+    text-align: justify;
+}
 
 
 /* ---------------------- */
